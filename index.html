@@ -1,50 +1,160 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    <meta charset="utf-8" />
-    <title>首页</title>
+    <meta charset="utf-8">
+    <title></title>
     <style type="text/css">
+        *{
+            margin: 0 auto;
+        }
+        .header{
+            width: 100%;
+            background-color: cornflowerblue;
+            color: black;
+            height: 120px;
+            line-height: 120px;
+            text-align: center;
+        }
+        .left{
+            width: 20%;
+            vertical-align: top;
+            background-color: darkblue;
+            display: inline-block;
+            height: 100%;
+        }
+        ul{
+            display: inline-block;
+            width: 100%;
+            list-style: none;
+            padding: 0;
+        }
+        ul li{
+            border-bottom:1px solid white ;
 
-        table{
-            border:none;
-            width: 600px;
-            height: 600px;
+            height: 50px;
+            line-height: 50px;
+            display: block;
+            text-align: center;
+        }
+        ul li:last-child{
+            border-bottom: 0;
+        }
+        ul li a{
+            color: white;
+            text-decoration: none;
+        }
+        ul li a:hover{
+            color: black;
+            display: block;
+            background-color: white;
+            box-sizing: border-box;
+            width: 100%;
+        }
+        .right{
+            width: 70%;
+            display: inline-block;
+
+        }
+        .foot{
+            width: 100%;
+            background-color: darkblue;
+            height: 30px;
+            color: white;
+            line-height: 30px;
+            text-align: center;
+
+        }
+        h3{
+            margin: 10px;
+        }
+        table {
+            border:1px solid black;
+            width: 47%;
+            text-align: center;
+
+        }
+        table td,th{
+            border:1px solid black;
         }
 
+        .center{
+            text-align: center;
+        }
+        .price::before{
+            content: '￥';
+        }
+        p{text-indent: 2em;}
+        p:first-letter{
+            font-size: 32px;
+            color: skyblue;
+        }
+        .img{
+            width: 500px;
+            height: 300px;
+        }
     </style>
 </head>
-
 <body>
-<table>
-    <tr height="50px">
-        <td colspan="2"  bgcolor="skyblue" align="center"><h2>来杯咖啡吗？</h2> </td>
-    </tr>
-    <tr>
-        <td rowspan="2" width="180px" bgcolor="aliceblue" style="vertical-align: top;">
-            <ul>
-                <li>拿铁</li>
-                <li>卡布奇诺</li>
-                <li>奥瑞白</li>
-                <li>美式咖啡</li>
-                <li>焦糖玛奇朵</li>
+<div class="header">
+    <h1><img src="img/coffe.png" height="30px" width="30px" alt="">来杯咖啡吧</h1>
 
-            </ul>
-        </td>
-        <td height="200px"><img src="natie.jpg" width="350px" height="300px"/> </td>
-    </tr>
-    <tr>
-        <td >
-            <h2>拿铁</h2><br />
-            <p>
-                拿铁咖啡，亦称鲜奶咖啡（意大利语：caffè latte）是诸多意大利式的拿铁咖啡中的一种。在英语的世界里，latte是caffè latte的简称，泛指由热鲜奶所冲泡的饮品。而法语单词lait与意大利语单词latte同义，都是指牛奶。Caffè Latte就是所谓加了牛奶的咖啡，通常直接音译为“拿铁咖啡”甚至“拿铁”或“那提”。至于法文的café au lait就是咖啡（café）加至（au）牛奶（lait）之意，一般人则称为“咖啡欧蕾”、或是“欧蕾咖啡”（或昂列咖啡）。
+</div>
+<div class="left">
+    <ul>
+        <li><a href="#1">玛奇朵</a> </li>
+        <li><a href="#2">美式咖啡</a></li>
+        <li><a href="#3">白咖啡</a></li>
+        <li><a href="#4">拿铁</a></li>
+        <li><a href="#5">康宝蓝</a></li>
 
-                直到1980年代，拿铁咖啡一词才在意大利境外使用。一般的拿铁咖啡的成分是三分之一的浓缩咖啡加三分之二的鲜奶，并加入些许奶泡。它与卡布奇诺相比，有更多鲜奶味道。
-            </p>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="2" bgcolor="skyblue" height="40px" align="center">版权所有&copy;黄贵波</td>
-    </tr>
-</table>
+    </ul>
+</div>
+<div class="right">
+    <div class="center"><img src="img/1.jpg"  width="500px" height="300px"  alt="null"/>
+
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <th>名称</th>
+                <th>单价</th>
+            </tr>
+            <tr>
+                <td>玛奇朵</td>
+                <td><span class="price">30</span> </td>
+            </tr>
+            <tr>
+                <td>美式咖啡</td>
+                <td><span class="price">50</span></td>
+            </tr>
+            <tr>
+                <td>白咖啡</td>
+                <td><span class="price">35</span></td>
+            </tr>
+            <tr>
+                <td>拿铁</td>
+                <td><span class="price">25</span></td>
+            </tr>
+            <tr>
+                <td>康宝蓝</td>
+                <td><span class="price">40</span></td>
+            </tr>
+        </table>
+        <img class="img" src="img/2.jpg"  alt="null">
+        <h3 id="1">玛奇朵（Espresso Macchiato）</h3>
+        <p>Macchiato原文为意大利语，代表“印记、烙印”的意思，发音为“玛奇雅朵”，但我们习惯称呼它玛奇朵。玛奇朵是在浓咖啡上加上薄薄一层热奶泡以保持咖啡温度，细腻香甜的奶泡能缓冲浓缩咖啡带来的苦涩冲击，想喝咖啡但又无法舍弃甜味的你，可以选择玛奇朵。</p>
+        <img class="img" src="img/3.jpg" alt="null">
+        <h3 id="2">美式咖啡（Americano）</h3>
+        <p>使用滴滤式咖啡壶、虹吸壶、法压壶之类的器具所制作出的黑咖啡，又或者是在意大利浓缩咖啡中加入大量的水制成。口味比较淡，但因为萃取时间长，所以咖啡因含量高。</p>
+        <img class="img" src="img/6.jpg" alt="null">
+        <h3 id="3">白咖啡（Flat White）</h3>
+        <p>马来西亚土特产，约有100多年的历史。白咖啡并不是指咖啡的颜色是白色的，而是采用特等咖啡豆及特级脱脂奶精原料，经特殊工艺加工后得到的咖啡，甘醇芳香不伤肠胃，保留了咖啡原有的色泽和香味，颜色比普通咖啡更清淡柔和，故得名为白咖啡。</p>
+        <img class="img" src="img/4.jpg"  alt="null">
+        <h3 id="4">拿铁（Caffè Latte）</h3>
+        <p>拿铁咖啡做法极其简单，就是在刚刚做好的意大利浓缩咖啡中倒入接近沸腾的牛奶。事实上，加入多少牛奶没有一定之规，可依个人口味自由调配。</p>
+        <img class="img" src="img/5.jpg"  alt="null">
+        <h3 id="5">康宝蓝（Espresso Con Panna）</h3>
+        <p>意大利语中，Con是搅拌，Panna是生奶油，康宝蓝即意式浓缩咖啡加上鲜奶油。有一种说法是，正宗的康宝蓝要配一颗巧克力或太妃糖，先将巧克力或太妃糖含在嘴里，再喝咖啡，让美味一起在口中绽放。</p>
+    </div>
+    <div class="foot">版权所有&copy;黄贵波</div>
+</div>
 </body>
 </html>
